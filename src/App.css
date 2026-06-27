@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 32px 48px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: left;
+  padding: 24px 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--code-bg);
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.6vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 72ch;
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.generator {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 28px;
+}
+
+.panel,
+.history {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--bg);
+  padding: 28px;
+}
+
+.panel-row {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.panel-row label {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.panel-row select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-h);
+  font-size: 1rem;
+}
+
+.title-card {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.title-label {
+  margin: 0 0 10px;
+  display: block;
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.title-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--text-h);
+}
+
+.button-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+button {
+  min-width: 160px;
+  min-height: 48px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
+
+.history h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.history p {
+  margin: 0 0 16px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.history li {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--code-bg);
+  color: var(--text-h);
+  border: 1px solid var(--border);
+}
+
+.history .empty {
+  color: var(--text);
+}
+
+@media (max-width: 860px) {
+  .app {
+    padding: 24px 20px 32px;
+  }
+
+  .generator {
+    grid-template-columns: 1fr;
+  }
+}
